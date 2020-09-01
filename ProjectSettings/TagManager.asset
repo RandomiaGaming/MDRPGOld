@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Biomes
+    uniqueID: 442785571
+    locked: 0
+  - name: Objects
+    uniqueID: 4179697181
+    locked: 0
+  - name: Player
+    uniqueID: 2889315371
+    locked: 0
+  - name: UI
+    uniqueID: 1384829331
+    locked: 0
+  - name: UI Popups
+    uniqueID: 2520356513
+    locked: 0

@@ -1,2 +1,0 @@
-# MDRPG
-A multidimensional RPG!
