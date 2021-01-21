@@ -1,7 +1,7 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/Temp
-/.vs/MDRPG/v16/Server/sqlite3/db.lock
-/.vs/MDRPG - Unity Project/v16/Server/sqlite3/db.lock
+MDRPG/bin/
+MDRPG/obj/
+.git/
+.vs/
+*.user
+*.suo
+packages/

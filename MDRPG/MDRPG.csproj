@@ -1,0 +1,147 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{28215735-7AD0-4BAB-A6FE-6B4377850549}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>MDRPG</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MonoGame.Framework.DesktopGL.3.8.0.1641\lib\net452\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game Interfaces\MonoGame\MonoGameInterface.cs" />
+    <Compile Include="MDRPG Core\Asset Management\Asset Codecs\EEMetaDecoder.cs" />
+    <Compile Include="MDRPG Core\Asset Management\Asset Codecs\ImageAssetCodec.cs" />
+    <Compile Include="MDRPG Core\Asset Management\Asset Codecs\TextAssetDecoder.cs" />
+    <Compile Include="MDRPG Core\Asset Management\Asset Types\AudioAsset.cs" />
+    <Compile Include="MDRPG Core\Asset Management\Asset Types\BianaryAsset.cs" />
+    <Compile Include="MDRPG Core\Asset Management\Asset Types\StageAsset.cs" />
+    <Compile Include="MDRPG Core\Asset Management\Asset Types\TextAsset.cs" />
+    <Compile Include="MDRPG Core\Asset Management\Asset Types\TextureAsset.cs" />
+    <Compile Include="MDRPG Core\Asset Management\AssetBase.cs" />
+    <Compile Include="MDRPG Core\Asset Management\AssetCodecInfo.cs" />
+    <Compile Include="MDRPG Core\Asset Management\AssetManager.cs" />
+    <Compile Include="MDRPG Core\Asset Management\RegisterAssetCodecAttribute.cs" />
+    <Compile Include="MDRPG Core\Assets\Data Types\Serializable Classes\SaveDataManager.cs" />
+    <Compile Include="MDRPG Core\Assets\Data Types\Serializable Classes\Multiverse\Multiverse.cs" />
+    <Compile Include="MDRPG Core\Assets\Data Types\Serializable Classes\Multiverse Meta\MultiverseMeta.cs" />
+    <Compile Include="MDRPG Core\Assets\Data Types\Serializable Classes\Biome.cs" />
+    <Compile Include="MDRPG Core\Assets\Data Types\Serializable Classes\Demention.cs" />
+    <Compile Include="MDRPG Core\Assets\Data Types\Serializable Classes\Item.cs" />
+    <Compile Include="MDRPG Core\Assets\Data Types\Serializable Classes\Object.cs" />
+    <Compile Include="MDRPG Core\Assets\Data Types\Serializable Classes\World.cs" />
+    <Compile Include="MDRPG Core\Base Classes\Collider.cs" />
+    <Compile Include="MDRPG Core\Base Classes\CollisionLogger.cs" />
+    <Compile Include="MDRPG Core\Base Classes\DontMeltGame.cs" />
+    <Compile Include="MDRPG Core\Base Classes\InputManager.cs" />
+    <Compile Include="MDRPG Core\Base Classes\Rigidbody.cs" />
+    <Compile Include="MDRPG Core\Base Classes\StageItem.cs" />
+    <Compile Include="MDRPG Core\Base Classes\StagePlayer.cs" />
+    <Compile Include="MDRPG Core\Data Types\AudioClip.cs" />
+    <Compile Include="MDRPG Core\Data Types\Collision.cs" />
+    <Compile Include="MDRPG Core\Data Types\Color.cs" />
+    <Compile Include="MDRPG Core\Data Types\Interface Packets\DontMeltGame Packets\InputPacket.cs" />
+    <Compile Include="MDRPG Core\Data Types\Interface Packets\DontMeltGame Packets\TickInputPacket.cs" />
+    <Compile Include="MDRPG Core\Data Types\Interface Packets\DontMeltGame Packets\TickReturnPacket.cs" />
+    <Compile Include="MDRPG Core\Data Types\KeyboardButton.cs" />
+    <Compile Include="MDRPG Core\Data Types\KeyboardState.cs" />
+    <Compile Include="MDRPG Core\Data Types\MouseButton.cs" />
+    <Compile Include="MDRPG Core\Data Types\MouseState.cs" />
+    <Compile Include="MDRPG Core\Data Types\Overlap.cs" />
+    <Compile Include="MDRPG Core\Data Types\Point.cs" />
+    <Compile Include="MDRPG Core\Data Types\Rectangle.cs" />
+    <Compile Include="MDRPG Core\Data Types\SideInfo.cs" />
+    <Compile Include="MDRPG Core\Data Types\Texture.cs" />
+    <Compile Include="MDRPG Core\Data Types\Vector2.cs" />
+    <Compile Include="MDRPG Core\Helper Classes\ColorHelper.cs" />
+    <Compile Include="MDRPG Core\Helper Classes\GradientHelper.cs" />
+    <Compile Include="MDRPG Core\Helper Classes\MathHelper.cs" />
+    <Compile Include="MDRPG Core\Helper Classes\RandomnessHelper.cs" />
+    <Compile Include="MDRPG Core\Helper Classes\TextureHelper.cs" />
+    <Compile Include="MDRPG Core\Stage Items\BounceBox.cs" />
+    <Compile Include="MDRPG Core\Stage Items\CheckPoint.cs" />
+    <Compile Include="MDRPG Core\Stage Items\GhostBlock.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Goalgate.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Ground.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Lava.cs" />
+    <Compile Include="MDRPG Core\Stage Items\LavaBubble.cs" />
+    <Compile Include="MDRPG Core\Stage Items\LavaCannon.cs" />
+    <Compile Include="MDRPG Core\Stage Items\NoJump.cs" />
+    <Compile Include="MDRPG Core\Stage Items\OneWayGate.cs" />
+    <Compile Include="MDRPG Core\Stage Items\OnOffBlock.cs" />
+    <Compile Include="MDRPG Core\Stage Items\OnOffSpike.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Player.cs" />
+    <Compile Include="MDRPG Core\Stage Items\PlayerCannon.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Spiny.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Spring.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Switch.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Tether.cs" />
+    <Compile Include="MDRPG Core\Stage Items\Track.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MDRPG Core\Assets\PlayerBoarder.png" />
+    <Content Include="MDRPG Core\Assets\PlayerSprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MDRPG Core\Assets\Data Types\Classes\" />
+    <Folder Include="MDRPG Core\Assets\Data Types\Serializable Classes\Settings\" />
+    <Folder Include="MDRPG Core\Assets\Data Types\Structs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <Import Project="packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets" Condition="Exists('packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets'))" />
+  </Target>
+</Project>
